@@ -14,3 +14,5 @@ public class Homework1 {
         }
     }
 }
+
+`images/mountain.jpg`
