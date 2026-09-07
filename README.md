@@ -15,4 +15,4 @@ public class Homework1 {
     }
 }
 
-`images/mountain.jpg`
+`images/homework1.jpg`
