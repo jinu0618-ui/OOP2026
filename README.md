@@ -53,4 +53,4 @@ public class HELLOWORLD {
 }
 
 ```
-![Alt homework11](./images/homework1.jpg)
+![Alt homework11](./images/homework1.png)
