@@ -179,7 +179,7 @@ public class HELLOWORLD {
             }
         }
 
-        System.out.println("=== 6. 이항정리 계수 구하기 (파스칼의 삼각형) ===");
+        System.out.println("=== 이항정리 계수 구하기 (파스칼의 삼각형) ===");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j <= i; j++) {
                 System.out.print(binomial[i][j] + " ");
