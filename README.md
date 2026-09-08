@@ -166,33 +166,25 @@ homework6
 
 public class HELLOWORLD {
     public static void main(String[] args) {
-        int data[] = new int[20];
+        int n = 7; 
+        int[][] binomial = new int[n][n];
 
-        for (int i = 0; i < 20; i++) {
-            data[i] = (int) (Math.random() * 100);
-        }
-
-        System.out.println("=== 정렬 전 데이터 ===");
-        for (int i = 0; i < 20; i++) {
-            System.out.print(data[i] + " ");
-        }
-        System.out.println("\n");
-
-        for (int i = 0; i < data.length - 1; i++) {
-            int minIndex = i;
-            for (int j = i + 1; j < data.length; j++) {
-                if (data[j] < data[minIndex]) {
-                    minIndex = j;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i) {
+                    binomial[i][j] = 1;
+                } else {
+                    binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
                 }
             }
-            int temp = data[minIndex];
-            data[minIndex] = data[i];
-            data[i] = temp;
         }
 
-        System.out.println("=== 선택 정렬 후 데이터 (오름차순) ===");
-        for (int i = 0; i < 20; i++) {
-            System.out.println(data[i]);
+        System.out.println("=== 6. 이항정리 계수 구하기 (파스칼의 삼각형) ===");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(binomial[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
