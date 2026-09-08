@@ -86,7 +86,7 @@ Homework3
 ```java
 public class HELLOWORLD {
     public static void main(String[] args) {
-        int n = 21; // 20번째 비율을 구하기 위해 21개의 피보나치 항 생성
+        int n = 21; 
         long[] fib = new long[n];
         
         fib[0] = 1;
@@ -114,7 +114,6 @@ public class HELLOWORLD {
     public static void main(String[] args) {
         System.out.println("=== 구구단표 ===");
         
-        // 세로로 출력하는 방식 또는 가로로 펼쳐서 출력하는 방식 중 선택할 수 있습니다.
         for (int i = 1; i <= 9; i++) {
             for (int j = 1; j <= 9; j++) {
                 System.out.print(j + "*" + i + "=" + (j * i) + "\t");
@@ -162,3 +161,33 @@ public class HELLOWORLD {
 
 ```
 ![Alt homework11](./images/homework5.png)
+
+homework6
+
+```java
+public class HELLOWORLD {
+    public static void main(String[] args) {
+        int n = 7;
+        int[][] binomial = new int[n][n];
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                if (j == 0 || j == i) {
+                    binomial[i][j] = 1;
+                } else {
+                    binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
+                }
+            }
+        }
+
+        System.out.println("=== 이항정리 계수 구하기 (파스칼의 삼각형) ===");
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print(binomial[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+![Alt homework11](./images/homework6.png)
