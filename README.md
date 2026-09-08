@@ -133,7 +133,6 @@ public class HELLOWORLD {
     public static void main(String[] args) {
         int iterations = 10000;
 
-        // 1. Gregory-Leibniz 급수 계산
         double piLeibniz = 0.0;
         for (int k = 0; k < iterations; k++) {
             double term = 4.0 / (2 * k + 1);
@@ -144,7 +143,6 @@ public class HELLOWORLD {
             }
         }
 
-        // 2. Madhava 급수 계산
         double sumMadhava = 0.0;
         for (int k = 0; k < iterations; k++) {
             double term = Math.pow(-3, -k) / (2 * k + 1);
@@ -162,32 +160,3 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework5.png)
 
-homework6
-
-```java
-public class HELLOWORLD {
-    public static void main(String[] args) {
-        int n = 7;
-        int[][] binomial = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= i; j++) {
-                if (j == 0 || j == i) {
-                    binomial[i][j] = 1;
-                } else {
-                    binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
-                }
-            }
-        }
-
-        System.out.println("=== 이항정리 계수 구하기 (파스칼의 삼각형) ===");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= i; j++) {
-                System.out.print(binomial[i][j] + " ");
-            }
-            System.out.println();
-        }
-    }
-}
-```
-![Alt homework11](./images/homework6.png)
