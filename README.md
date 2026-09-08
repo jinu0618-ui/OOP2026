@@ -3,14 +3,51 @@
 Homework1
 
 ```java
-public class Homework1 {
+public class HELLOWORLD {
     public static void main(String[] args) {
-        int i, j;
-        for(i=0; i<10; i++) {
-            for(j=0; j<10; j++) {
-                System.out.print("*");
+        
+        System.out.println("1");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j <= i; j++) {
+                System.out.print("#");
             }
-            System.out.println("");
+            System.out.println();
+        }
+        
+        System.out.println();
+        
+        System.out.println("2");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 9 - i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j <= i; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+        
+        System.out.println();
+        
+        System.out.println("3");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 10 - i; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
+        }
+        
+        System.out.println();
+        
+        System.out.println("4");
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < 10 - i; j++) {
+                System.out.print("#");
+            }
+            System.out.println();
         }
     }
 }
