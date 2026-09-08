@@ -55,6 +55,31 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework1.png)
 
+```java
+public class HELLOWORLD {
+    public static void main(String[] args) {
+        int n = 20;
+        long[] fib = new long[n];
+        
+        fib[0] = 1;
+        fib[1] = 1;
+
+        for (int i = 2; i < n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+
+        System.out.println("=== 피보나치 수열 20번째까지 ===");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fib[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+```
+![Alt homework11](./images/homework2.png)
+
+
 
 ```java
 public class HELLOWORLD {
