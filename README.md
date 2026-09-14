@@ -191,3 +191,36 @@ public class HELLOWORLD {
 
 ```
 ![Alt homework11](./images/homework6.png)
+
+homework6
+
+```java
+public class HELLOWORLD {
+    public static void main(String[] args) {
+        int data[] = new int[20];
+        
+        for(int i = 0; i < 20; i++) {
+            data[i] = (int)(Math.random() * 100);
+        }
+        
+        for(int i = 0; i < data.length - 1; i++) {
+            int minIndex = i;
+            for(int j = i + 1; j < data.length; j++) {
+                if(data[j] < data[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            int temp = data[minIndex];
+            data[minIndex] = data[i];
+            data[i] = temp;
+        }
+        
+        System.out.println("=== 선택 정렬 결과 (오름차순) ===");
+        for(int i = 0; i < 20; i++) {
+            System.out.println(data[i]);
+        }
+    }
+}
+```
+![Alt homework11](./images/homework7.png)
+
