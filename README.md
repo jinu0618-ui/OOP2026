@@ -224,3 +224,35 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework7.png)
 
+homework8
+
+```java
+
+public class HELLOWORLD {
+    public static void main(String[] args) {
+        int score[][] = new int[30][6];
+        
+        for(int i = 0; i < 30; i++) {
+            score[i][0] = i + 1; 
+            int sum = 0;
+            
+            for(int j = 1; j <= 4; j++) {
+                score[i][j] = (int)(Math.random() * 101);
+                sum += score[i][j];
+            }
+            
+            score[i][5] = sum; 
+        }
+        
+        System.out.println("번호\t국어\t영어\t수학\t과학\t합계");
+        System.out.println("----------------------------------------");
+        for(int i = 0; i < 30; i++) {
+            for(int j = 0; j < 6; j++) {
+                System.out.print(score[i][j] + "\t");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+![Alt homework11](./images/homework8.png)
