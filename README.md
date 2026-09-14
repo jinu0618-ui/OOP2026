@@ -192,7 +192,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework6.png)
 
-homework6
+homework7
 
 ```java
 public class HELLOWORLD {
