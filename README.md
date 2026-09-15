@@ -55,7 +55,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework1.png)
 
-Homework2
+# Homework2
 
 ```java
 public class HELLOWORLD {
@@ -81,7 +81,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework2.png)
 
-Homework3
+# Homework3
 
 ```java
 public class HELLOWORLD {
@@ -107,7 +107,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework3.png)
 
-Homework4
+# Homework4
 
 ```java
 public class HELLOWORLD {
@@ -126,7 +126,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework4.png)
 
-Homework5
+# Homework5
 
 ```java
 public class HELLOWORLD {
@@ -160,7 +160,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework5.png)
 
-homework6
+# homework6
 
 ```java
 
@@ -192,7 +192,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework6.png)
 
-homework7
+# homework7
 
 ```java
 public class HELLOWORLD {
@@ -224,7 +224,7 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework7.png)
 
-homework8
+# homework8
 
 ```java
 
