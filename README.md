@@ -262,37 +262,60 @@ public class HELLOWORLD {
 ```java
 
 public class HELLOWORLD {
+
     public static void main(String[] args) {
-        int[] data = new int[100];
-        
-        for (int i = 0; i < data.length; i++) {
-            data[i] = (int)(Math.random() * 100);
+        // TODO Auto-generated method stub
+        int array_count, max_value, bin_size, display_scale, hist_size;
+        if (args.length != 4)
+            return;
+
+        array_count = Integer.parseInt(args[0]);
+        max_value = Integer.parseInt(args[1]);
+        bin_size = Integer.parseInt(args[2]);
+        display_scale = Integer.parseInt(args[3]);
+        hist_size = max_value / bin_size + 1;
+
+        int[] arr = new int[array_count];
+        int[] hist = new int[hist_size];
+
+        System.out.println("난수 데이터:");
+        for (int i = 0; i < array_count; i++) {
+            arr[i] = (int) (Math.random() * max_value);
+            System.out.print(arr[i] + " ");
         }
+        System.out.println(); 
 
-        int[] bins = new int[10];
-
-        for (int i = 0; i < data.length; i++) {
-            int binIndex = data[i] / 10;
-            if (binIndex >= 10) {
-                binIndex = 9; 
+        for (int i = 0; i < array_count; i++) {
+            int binIndex = arr[i] / bin_size;
+            if (binIndex < hist_size) {
+                hist[binIndex]++;
             }
-            bins[binIndex]++;
         }
 
-        for (int i = 0; i < bins.length; i++) {
-            int start = i * 10;
-            int end = start + 9;
-            
-            System.out.printf("%2d~%2d : ", start, end);
-            
-            for (int j = 0; j < bins[i]; j++) {
+        System.out.println("\n구간별 빈도수:");
+        for (int i = 0; i < hist_size; i++) {
+            System.out.print(hist[i] + " ");
+        }
+        System.out.println(); 
+
+        System.out.println("\n도수분포표 시각화:");
+        for (int i = 0; i < hist_size; i++) {
+            int start = i * bin_size;
+            int end = Math.min(start + bin_size - 1, max_value);
+
+            if (start > max_value) break;
+
+            System.out.printf("%3d~%-3d ", start, end);
+
+            int sharpCount = hist[i] / display_scale;
+            for (int j = 0; j < sharpCount; j++) {
                 System.out.print("#");
             }
-            System.out.println();
+            System.out.println(); 
         }
     }
 }
 
 ```
-![Alt homework11](./images/homework10.png)
+![Alt homework11](./images/homework-10.png)
 
