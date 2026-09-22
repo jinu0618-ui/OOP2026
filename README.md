@@ -378,3 +378,39 @@ public class HELLOWORLD {
 ```
 ![Alt homework11](./images/homework11.png)
 
+# homework13
+
+```java
+
+import java.util.Scanner;
+
+public class HELLOWORLD {
+public static void main(String[] args) {
+    int out;
+    while(true) {
+        Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.nextLine();
+        System.out.println(inputString);
+        String[] arrOfStr = inputString.split(" ");
+        for ( int i=0; i<arrOfStr.length; i++) {
+            System.out.println(arrOfStr[i]);
+        }
+        if(arrOfStr[1].equals("+")) {
+            out = Integer.parseInt(arrOfStr[0])+Integer.parseInt(arrOfStr[2]);
+            System.out.println(out);
+        }
+        else if(arrOfStr[1].equals("-")) {
+            
+        }
+        else if(arrOfStr[1].equals("#")) {
+            
+        }
+        else if(arrOfStr[1].equals("/")) {
+            
+        }
+    }
+ }
+}
+```
+![Alt homework11](./images/homework13.png)
+
