@@ -161,22 +161,29 @@ public class HELLOWORLD {
 
 public class HELLOWORLD {
     public static void main(String[] args) {
-        int n = 7; 
-        int[][] binomial = new int[n][n];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= i; j++) {
-                if (j == 0 || j == i) {
-                    binomial[i][j] = 1;
-                } else {
-                    binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
-                }
+        int i, n = 10;
+        int array[] = new int[n];
+        int binomial[][] = new int[n][n];
+        float farr[] = new float[n];
+        double darr[] = new double[n];
+        
+        for (i = 0; i < n; i++) {
+            binomial[i][0] = binomial[i][i] = 1;
+        }
+        
+        for (i = 2; i < n; i++) {
+            for (int j = 1; j < i; j++) {
+                binomial[i][j] = binomial[i - 1][j - 1] + binomial[i - 1][j];
             }
         }
+        
+        printArray(n, binomial);
+    }
 
-        System.out.println("=== 이항정리 계수 구하기 (파스칼의 삼각형) ===");
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j <= i; j++) {
+    public static void printArray(int n, int binomial[][]) {
+        int i, j;
+        for (i = 0; i < n; i++) {
+            for (j = 0; j <= i; j++) {
                 System.out.print(binomial[i][j] + " ");
             }
             System.out.println();
