@@ -131,34 +131,20 @@ public class HELLOWORLD {
 ```java
 public class HELLOWORLD {
     public static void main(String[] args) {
-        int iterations = 10000;
-
-        double piLeibniz = 0.0;
-        for (int k = 0; k < iterations; k++) {
-            double term = 4.0 / (2 * k + 1);
-            if (k % 2 == 0) {
-                piLeibniz += term;
-            } else {
-                piLeibniz -= term;
-            }
-        }
-
-        double sumMadhava = 0.0;
-        for (int k = 0; k < iterations; k++) {
-            double term = Math.pow(-3, -k) / (2 * k + 1);
-            sumMadhava += term;
-        }
-        double piMadhava = Math.sqrt(12) * sumMadhava;
-
-        System.out.println("=== 원주율(Pi) 계산 결과 (반복 횟수: " + iterations + ") ===");
-        System.out.println("Java Math.PI    : " + Math.PI);
-        System.out.println("Gregory-Leibniz : " + piLeibniz);
-        System.out.println("Madhava         : " + piMadhava);
+        int i, n = 100, sign = 1; 
+        double sum = 0; 
+        
+        for (i = 0; i < n; i++) { 
+            sum += sign * 4. / (2. * i + 1.); 
+            sign *= -1; 
+        } 
+        
+        System.out.println(sum); 
     }
 }
 
 ```
-![Alt homework11](./images/homework5.png)
+![Alt homework11](./images/homework5-1.png)
 
 # homework6
 
