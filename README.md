@@ -131,20 +131,29 @@ public class HELLOWORLD {
 ```java
 public class HELLOWORLD {
     public static void main(String[] args) {
-        int i, n = 100, sign = 1; 
-        double sum = 0; 
-        
-        for (i = 0; i < n; i++) { 
-            sum += sign * 4. / (2. * i + 1.); 
-            sign *= -1; 
-        } 
-        
-        System.out.println(sum); 
+        int n = 100;
+
+        int i1, sign1 = 1;
+        double sum1 = 0;
+        for (i1 = 0; i1 < n; i1++) {
+            sum1 += sign1 * 4. / (2. * i1 + 1.);
+            sign1 *= -1;
+        }
+        System.out.println("Gregory-Leibniz Pi: " + sum1);
+
+        int i2, sign2 = 1;
+        double sum2 = 0;
+        for (i2 = 0; i2 < n; i2++) {
+            sum2 += sign2 * 1. / ((2. * i2 + 1.) * Math.pow(3., i2));
+            sign2 *= -1;
+        }
+        double piMadhava = Math.sqrt(12) * sum2;
+        System.out.println("Madhava Pi: " + piMadhava);
     }
 }
 
 ```
-![Alt homework11](./images/homework5-1.png)
+![Alt homework11](./images/homework5-2.png)
 
 # homework6
 
